@@ -1,0 +1,18 @@
+@use "../styles/mixins" as *;
+@use "../styles/variables" as *;
+
+.home-page {
+  height: 100%;
+  width: 100%;
+
+  @include flex();
+
+  background-image: url("https://www.stochastication.com/content/images/2016/01/mario-kart-8-anti-gravity-racing-wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay with transparency */
+
+  color: white;
+}
