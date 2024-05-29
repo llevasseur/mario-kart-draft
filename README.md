@@ -6,7 +6,8 @@ Front-end application for a mario kart map drafter.
  - React
  - create-react-app
  - Axios
- -
+ - Sass
+ 
 ## Back-end
  - Express
  - Knex
