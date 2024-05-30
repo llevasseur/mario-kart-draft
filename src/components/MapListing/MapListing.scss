@@ -1,0 +1,41 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.maps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  padding: 8px;
+
+  &__list {
+    flex: 1;
+
+    box-sizing: border-box;
+
+    @include flex();
+
+    @include tablet {
+      //padding: 16px;
+      //max-width: 30%;
+    }
+  }
+
+  &__img {
+    width: 30vw;
+    transition: transform 0.1s ease-in-out;
+
+    @include tablet {
+      width: 20vw;
+    }
+
+    @include desktop {
+      width: 16vw;
+    }
+
+    &:hover {
+      transform: scale(1.05); /* Scale up the image */
+      cursor: pointer;
+    }
+  }
+}
