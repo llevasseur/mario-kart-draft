@@ -1,0 +1,52 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.map-box {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(188, 98, 98, 0.249);
+  padding: 8px;
+  margin: 24px 8px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @include tablet {
+    padding: 16px;
+    margin: 24px 16px;
+    min-height: 120px;
+  }
+
+  @include desktop {
+    padding: 20px;
+    margin: 24px 10px;
+    min-height: 140px;
+  }
+
+  &__description {
+  }
+
+  &__img {
+    width: 30vw;
+    height: auto;
+    object-fit: cover;
+
+    transition: transform 0.1s ease-in-out;
+
+    @include tablet {
+      width: 20vw;
+    }
+
+    @include desktop {
+      width: 16vw;
+    }
+
+    &:hover {
+      transform: scale(1.05); /* Scale up the image */
+      cursor: pointer;
+    }
+  }
+}

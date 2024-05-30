@@ -2,9 +2,7 @@ import "./MapListing.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const MapListing = () => {
-  const [tracks, setTracks] = useState([]);
-
+const MapListing = ({ tracks, setTracks, addToGrid }) => {
   useEffect(() => {
     // Fetch image paths from the server
     const getTracks = async () => {
@@ -17,11 +15,23 @@ const MapListing = () => {
     };
     getTracks();
   }, []);
+
+  const handleMapClick = (track) => {
+    addToGrid(track);
+
+    // Remove track from list of tracks
+    setTracks((prevTracks) => prevTracks.filter((t) => t.id !== track.id));
+  };
+
   return (
     <div>
       <div className="maps">
         {tracks?.map((track) => (
-          <div className="maps__list" key={track.id}>
+          <div
+            className="maps__list-item"
+            key={track.id}
+            onClick={() => handleMapClick(track)}
+          >
             <img
               className="maps__img"
               src={`http://localhost:5050/images/${track.img}`}
