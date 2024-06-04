@@ -24,7 +24,7 @@ const MapListing = () => {
           <div className="maps__list" key={track.id}>
             <img
               className="maps__img"
-              src={`http://localhost:5050/images/${track.img}`}
+              src={`http://localhost:5050/images/tracks/${track.img}`}
               alt={track.name}
             />
           </div>
