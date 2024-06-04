@@ -1,8 +1,8 @@
-import "./MapListing.scss";
+import "./GrandPrixList.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const MapListing = () => {
+const GrandPrixList = () => {
   const [tracks, setTracks] = useState([]);
 
   useEffect(() => {
@@ -34,4 +34,4 @@ const MapListing = () => {
   );
 };
 
-export default MapListing;
+export default GrandPrixList;
