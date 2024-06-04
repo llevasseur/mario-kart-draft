@@ -1,14 +1,15 @@
 import "./HomePage.scss";
-import MapListing from "../../components/MapListing/MapListing";
 
-import marioKartTracks from "../../data/mapListings.json";
+// import MapGrid from '../../components/MapGrid/MapGrid';
+// import GrandPrixList from '../../components/GrandPrixList/GrandPrixList';
+// import ScrollToTopIcon from '../../components/ScrollToTopIcon/ScrollToTopIcon';
 
 const HomePage = () => {
-  console.log(marioKartTracks);
-  console.log("../../assets/images/", marioKartTracks[0].img);
   return (
     <main className="home-page">
-      <MapListing />
+      {/* <MapGrid /> */}
+      {/* <GrandPrixList /> */}
+      {/* <ScrollToTopIcon /> */}
     </main>
   );
 };
