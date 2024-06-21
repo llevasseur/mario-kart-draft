@@ -18,7 +18,7 @@ const GrandPrixList = () => {
     getTracks();
   }, []);
   return (
-    <div>
+    <>
       <div className="maps">
         {tracks?.map((track) => (
           <div className="maps__list" key={track.id}>
@@ -30,7 +30,7 @@ const GrandPrixList = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
